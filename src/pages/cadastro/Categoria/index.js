@@ -1,14 +1,15 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import PageDefault from '../../../components/PageDefault'
 import FormField from '../../../components/FormField'
+import Button from '../../../components/Button'
 
 function CadastroCategoria() {
   
   const valoresIniciais = {
-    nome: 'Filmes',
-    descricao: 'Filmes interessantes',
-    cor: '#000'
+    nome: '',
+    descricao: '',
+    cor: ''
   }
 
   const [categorias, setCategorias] = useState([])
@@ -44,7 +45,7 @@ function CadastroCategoria() {
 
         <FormField
           label="Nome da Categoria"
-          type="text"
+          type="textarea"
           name="nome"
           value={values.nome}
           onChange={handleChange}
@@ -90,9 +91,9 @@ function CadastroCategoria() {
             </label>
           </div>*/}
 
-        <button>
+        <Button>
           Cadastrar
-        </button>
+        </Button>
       </form>
 
             <ul>
